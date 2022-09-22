@@ -1,0 +1,1289 @@
+{
+  "name": "MSKCluster-STG93",
+  "description": null,
+  "permissions": "PUBLIC_READ_WRITE",
+  "pages": [
+    {
+      "name": "AwsMskBrokerSample",
+      "description": null,
+      "widgets": [
+        {
+          "title": "Bytes in per sec",
+          "layout": {
+            "column": 1,
+            "row": 1,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.bytesInPerSec.Sum`), average(`provider.bytesInPerSec.Average`), max(`provider.bytesInPerSec.Maximum`), min(`provider.bytesInPerSec.Minimum`), sum(`provider.bytesInPerSec.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Bytes out per sec",
+          "layout": {
+            "column": 4,
+            "row": 1,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.bytesOutPerSec.Sum`), average(`provider.bytesOutPerSec.Average`), max(`provider.bytesOutPerSec.Maximum`), min(`provider.bytesOutPerSec.Minimum`), sum(`provider.bytesOutPerSec.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Cpu system",
+          "layout": {
+            "column": 7,
+            "row": 1,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.cpuSystem.Sum`), average(`provider.cpuSystem.Average`), max(`provider.cpuSystem.Maximum`), min(`provider.cpuSystem.Minimum`), sum(`provider.cpuSystem.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Cpu user",
+          "layout": {
+            "column": 10,
+            "row": 1,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.cpuUser.Sum`), average(`provider.cpuUser.Average`), max(`provider.cpuUser.Maximum`), min(`provider.cpuUser.Minimum`), sum(`provider.cpuUser.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Cpu idle",
+          "layout": {
+            "column": 1,
+            "row": 4,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.cpuIdle.Sum`), average(`provider.cpuIdle.Average`), max(`provider.cpuIdle.Maximum`), min(`provider.cpuIdle.Minimum`), sum(`provider.cpuIdle.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Fetch consumer local time ms mean",
+          "layout": {
+            "column": 4,
+            "row": 4,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.fetchConsumerLocalTimeMsMean.Sum`), average(`provider.fetchConsumerLocalTimeMsMean.Average`), max(`provider.fetchConsumerLocalTimeMsMean.Maximum`), min(`provider.fetchConsumerLocalTimeMsMean.Minimum`), sum(`provider.fetchConsumerLocalTimeMsMean.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Fetch consumer request queue time ms mean",
+          "layout": {
+            "column": 7,
+            "row": 4,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.fetchConsumerRequestQueueTimeMsMean.Sum`), average(`provider.fetchConsumerRequestQueueTimeMsMean.Average`), max(`provider.fetchConsumerRequestQueueTimeMsMean.Maximum`), min(`provider.fetchConsumerRequestQueueTimeMsMean.Minimum`), sum(`provider.fetchConsumerRequestQueueTimeMsMean.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Fetch consumer response queue time ms mean",
+          "layout": {
+            "column": 10,
+            "row": 4,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.fetchConsumerResponseQueueTimeMsMean.Sum`), average(`provider.fetchConsumerResponseQueueTimeMsMean.Average`), max(`provider.fetchConsumerResponseQueueTimeMsMean.Maximum`), min(`provider.fetchConsumerResponseQueueTimeMsMean.Minimum`), sum(`provider.fetchConsumerResponseQueueTimeMsMean.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Fetch consumer response send time ms mean",
+          "layout": {
+            "column": 1,
+            "row": 7,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.fetchConsumerResponseSendTimeMsMean.Sum`), average(`provider.fetchConsumerResponseSendTimeMsMean.Average`), max(`provider.fetchConsumerResponseSendTimeMsMean.Maximum`), min(`provider.fetchConsumerResponseSendTimeMsMean.Minimum`), sum(`provider.fetchConsumerResponseSendTimeMsMean.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Fetch consumer total time ms mean",
+          "layout": {
+            "column": 4,
+            "row": 7,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.fetchConsumerTotalTimeMsMean.Sum`), average(`provider.fetchConsumerTotalTimeMsMean.Average`), max(`provider.fetchConsumerTotalTimeMsMean.Maximum`), min(`provider.fetchConsumerTotalTimeMsMean.Minimum`), sum(`provider.fetchConsumerTotalTimeMsMean.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Fetch follower local time ms mean",
+          "layout": {
+            "column": 7,
+            "row": 7,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.fetchFollowerLocalTimeMsMean.Sum`), average(`provider.fetchFollowerLocalTimeMsMean.Average`), max(`provider.fetchFollowerLocalTimeMsMean.Maximum`), min(`provider.fetchFollowerLocalTimeMsMean.Minimum`), sum(`provider.fetchFollowerLocalTimeMsMean.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Fetch follower request queue time ms mean",
+          "layout": {
+            "column": 10,
+            "row": 7,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.fetchFollowerRequestQueueTimeMsMean.Sum`), average(`provider.fetchFollowerRequestQueueTimeMsMean.Average`), max(`provider.fetchFollowerRequestQueueTimeMsMean.Maximum`), min(`provider.fetchFollowerRequestQueueTimeMsMean.Minimum`), sum(`provider.fetchFollowerRequestQueueTimeMsMean.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Fetch follower response queue time ms mean",
+          "layout": {
+            "column": 1,
+            "row": 10,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.fetchFollowerResponseQueueTimeMsMean.Sum`), average(`provider.fetchFollowerResponseQueueTimeMsMean.Average`), max(`provider.fetchFollowerResponseQueueTimeMsMean.Maximum`), min(`provider.fetchFollowerResponseQueueTimeMsMean.Minimum`), sum(`provider.fetchFollowerResponseQueueTimeMsMean.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Fetch follower response send time ms mean",
+          "layout": {
+            "column": 4,
+            "row": 10,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.fetchFollowerResponseSendTimeMsMean.Sum`), average(`provider.fetchFollowerResponseSendTimeMsMean.Average`), max(`provider.fetchFollowerResponseSendTimeMsMean.Maximum`), min(`provider.fetchFollowerResponseSendTimeMsMean.Minimum`), sum(`provider.fetchFollowerResponseSendTimeMsMean.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Fetch follower total time ms mean",
+          "layout": {
+            "column": 7,
+            "row": 10,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.fetchFollowerTotalTimeMsMean.Sum`), average(`provider.fetchFollowerTotalTimeMsMean.Average`), max(`provider.fetchFollowerTotalTimeMsMean.Maximum`), min(`provider.fetchFollowerTotalTimeMsMean.Minimum`), sum(`provider.fetchFollowerTotalTimeMsMean.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Fetch message conversions per sec",
+          "layout": {
+            "column": 10,
+            "row": 10,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.fetchMessageConversionsPerSec.Sum`), average(`provider.fetchMessageConversionsPerSec.Average`), max(`provider.fetchMessageConversionsPerSec.Maximum`), min(`provider.fetchMessageConversionsPerSec.Minimum`), sum(`provider.fetchMessageConversionsPerSec.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Fetch throttle time",
+          "layout": {
+            "column": 1,
+            "row": 13,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.fetchThrottleTime.Sum`), average(`provider.fetchThrottleTime.Average`), max(`provider.fetchThrottleTime.Maximum`), min(`provider.fetchThrottleTime.Minimum`), sum(`provider.fetchThrottleTime.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Fetch throttle byte rate",
+          "layout": {
+            "column": 4,
+            "row": 13,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.fetchThrottleByteRate.Sum`), average(`provider.fetchThrottleByteRate.Average`), max(`provider.fetchThrottleByteRate.Maximum`), min(`provider.fetchThrottleByteRate.Minimum`), sum(`provider.fetchThrottleByteRate.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Fetch throttle queue size",
+          "layout": {
+            "column": 7,
+            "row": 13,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.fetchThrottleQueueSize.Sum`), average(`provider.fetchThrottleQueueSize.Average`), max(`provider.fetchThrottleQueueSize.Maximum`), min(`provider.fetchThrottleQueueSize.Minimum`), sum(`provider.fetchThrottleQueueSize.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Kafka app logs disk used",
+          "layout": {
+            "column": 10,
+            "row": 13,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.kafkaAppLogsDiskUsed.Sum`), average(`provider.kafkaAppLogsDiskUsed.Average`), max(`provider.kafkaAppLogsDiskUsed.Maximum`), min(`provider.kafkaAppLogsDiskUsed.Minimum`), sum(`provider.kafkaAppLogsDiskUsed.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Kafka data logs disk used",
+          "layout": {
+            "column": 1,
+            "row": 16,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.kafkaDataLogsDiskUsed.Sum`), average(`provider.kafkaDataLogsDiskUsed.Average`), max(`provider.kafkaDataLogsDiskUsed.Maximum`), min(`provider.kafkaDataLogsDiskUsed.Minimum`), sum(`provider.kafkaDataLogsDiskUsed.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Leader count",
+          "layout": {
+            "column": 4,
+            "row": 16,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.leaderCount.Sum`), average(`provider.leaderCount.Average`), max(`provider.leaderCount.Maximum`), min(`provider.leaderCount.Minimum`), sum(`provider.leaderCount.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Memory buffered",
+          "layout": {
+            "column": 7,
+            "row": 16,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.memoryBuffered.Sum`), average(`provider.memoryBuffered.Average`), max(`provider.memoryBuffered.Maximum`), min(`provider.memoryBuffered.Minimum`), sum(`provider.memoryBuffered.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Memory cached",
+          "layout": {
+            "column": 10,
+            "row": 16,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.memoryCached.Sum`), average(`provider.memoryCached.Average`), max(`provider.memoryCached.Maximum`), min(`provider.memoryCached.Minimum`), sum(`provider.memoryCached.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Memory free",
+          "layout": {
+            "column": 1,
+            "row": 19,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.memoryFree.Sum`), average(`provider.memoryFree.Average`), max(`provider.memoryFree.Maximum`), min(`provider.memoryFree.Minimum`), sum(`provider.memoryFree.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Memory used",
+          "layout": {
+            "column": 4,
+            "row": 19,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.memoryUsed.Sum`), average(`provider.memoryUsed.Average`), max(`provider.memoryUsed.Maximum`), min(`provider.memoryUsed.Minimum`), sum(`provider.memoryUsed.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Messages in per sec",
+          "layout": {
+            "column": 7,
+            "row": 19,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.messagesInPerSec.Sum`), average(`provider.messagesInPerSec.Average`), max(`provider.messagesInPerSec.Maximum`), min(`provider.messagesInPerSec.Minimum`), sum(`provider.messagesInPerSec.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Network processor avg idle percent",
+          "layout": {
+            "column": 10,
+            "row": 19,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.networkProcessorAvgIdlePercent.Sum`), average(`provider.networkProcessorAvgIdlePercent.Average`), max(`provider.networkProcessorAvgIdlePercent.Maximum`), min(`provider.networkProcessorAvgIdlePercent.Minimum`), sum(`provider.networkProcessorAvgIdlePercent.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Network rx dropped",
+          "layout": {
+            "column": 1,
+            "row": 22,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.networkRxDropped.Sum`), average(`provider.networkRxDropped.Average`), max(`provider.networkRxDropped.Maximum`), min(`provider.networkRxDropped.Minimum`), sum(`provider.networkRxDropped.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Network rx errors",
+          "layout": {
+            "column": 4,
+            "row": 22,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.networkRxErrors.Sum`), average(`provider.networkRxErrors.Average`), max(`provider.networkRxErrors.Maximum`), min(`provider.networkRxErrors.Minimum`), sum(`provider.networkRxErrors.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Network rx packets",
+          "layout": {
+            "column": 7,
+            "row": 22,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.networkRxPackets.Sum`), average(`provider.networkRxPackets.Average`), max(`provider.networkRxPackets.Maximum`), min(`provider.networkRxPackets.Minimum`), sum(`provider.networkRxPackets.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Network tx dropped",
+          "layout": {
+            "column": 10,
+            "row": 22,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.networkTxDropped.Sum`), average(`provider.networkTxDropped.Average`), max(`provider.networkTxDropped.Maximum`), min(`provider.networkTxDropped.Minimum`), sum(`provider.networkTxDropped.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Network tx errors",
+          "layout": {
+            "column": 1,
+            "row": 25,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.networkTxErrors.Sum`), average(`provider.networkTxErrors.Average`), max(`provider.networkTxErrors.Maximum`), min(`provider.networkTxErrors.Minimum`), sum(`provider.networkTxErrors.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Network tx packets",
+          "layout": {
+            "column": 4,
+            "row": 25,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.networkTxPackets.Sum`), average(`provider.networkTxPackets.Average`), max(`provider.networkTxPackets.Maximum`), min(`provider.networkTxPackets.Minimum`), sum(`provider.networkTxPackets.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Partition count",
+          "layout": {
+            "column": 7,
+            "row": 25,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.partitionCount.Sum`), average(`provider.partitionCount.Average`), max(`provider.partitionCount.Maximum`), min(`provider.partitionCount.Minimum`), sum(`provider.partitionCount.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Produce local time ms mean",
+          "layout": {
+            "column": 10,
+            "row": 25,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.produceLocalTimeMsMean.Sum`), average(`provider.produceLocalTimeMsMean.Average`), max(`provider.produceLocalTimeMsMean.Maximum`), min(`provider.produceLocalTimeMsMean.Minimum`), sum(`provider.produceLocalTimeMsMean.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Produce message conversions per sec",
+          "layout": {
+            "column": 1,
+            "row": 28,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.produceMessageConversionsPerSec.Sum`), average(`provider.produceMessageConversionsPerSec.Average`), max(`provider.produceMessageConversionsPerSec.Maximum`), min(`provider.produceMessageConversionsPerSec.Minimum`), sum(`provider.produceMessageConversionsPerSec.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Produce message conversions time ms mean",
+          "layout": {
+            "column": 4,
+            "row": 28,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.produceMessageConversionsTimeMsMean.Sum`), average(`provider.produceMessageConversionsTimeMsMean.Average`), max(`provider.produceMessageConversionsTimeMsMean.Maximum`), min(`provider.produceMessageConversionsTimeMsMean.Minimum`), sum(`provider.produceMessageConversionsTimeMsMean.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Produce request queue time ms mean",
+          "layout": {
+            "column": 7,
+            "row": 28,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.produceRequestQueueTimeMsMean.Sum`), average(`provider.produceRequestQueueTimeMsMean.Average`), max(`provider.produceRequestQueueTimeMsMean.Maximum`), min(`provider.produceRequestQueueTimeMsMean.Minimum`), sum(`provider.produceRequestQueueTimeMsMean.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Produce response queue time ms mean",
+          "layout": {
+            "column": 10,
+            "row": 28,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.produceResponseQueueTimeMsMean.Sum`), average(`provider.produceResponseQueueTimeMsMean.Average`), max(`provider.produceResponseQueueTimeMsMean.Maximum`), min(`provider.produceResponseQueueTimeMsMean.Minimum`), sum(`provider.produceResponseQueueTimeMsMean.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Produce response send time ms mean",
+          "layout": {
+            "column": 1,
+            "row": 31,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.produceResponseSendTimeMsMean.Sum`), average(`provider.produceResponseSendTimeMsMean.Average`), max(`provider.produceResponseSendTimeMsMean.Maximum`), min(`provider.produceResponseSendTimeMsMean.Minimum`), sum(`provider.produceResponseSendTimeMsMean.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Produce total time ms mean",
+          "layout": {
+            "column": 4,
+            "row": 31,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.produceTotalTimeMsMean.Sum`), average(`provider.produceTotalTimeMsMean.Average`), max(`provider.produceTotalTimeMsMean.Maximum`), min(`provider.produceTotalTimeMsMean.Minimum`), sum(`provider.produceTotalTimeMsMean.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Produce throttle time",
+          "layout": {
+            "column": 7,
+            "row": 31,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.produceThrottleTime.Sum`), average(`provider.produceThrottleTime.Average`), max(`provider.produceThrottleTime.Maximum`), min(`provider.produceThrottleTime.Minimum`), sum(`provider.produceThrottleTime.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Produce throttle byte rate",
+          "layout": {
+            "column": 10,
+            "row": 31,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.produceThrottleByteRate.Sum`), average(`provider.produceThrottleByteRate.Average`), max(`provider.produceThrottleByteRate.Maximum`), min(`provider.produceThrottleByteRate.Minimum`), sum(`provider.produceThrottleByteRate.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Produce throttle queue size",
+          "layout": {
+            "column": 1,
+            "row": 34,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.produceThrottleQueueSize.Sum`), average(`provider.produceThrottleQueueSize.Average`), max(`provider.produceThrottleQueueSize.Maximum`), min(`provider.produceThrottleQueueSize.Minimum`), sum(`provider.produceThrottleQueueSize.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Request bytes mean",
+          "layout": {
+            "column": 4,
+            "row": 34,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.requestBytesMean.Sum`), average(`provider.requestBytesMean.Average`), max(`provider.requestBytesMean.Maximum`), min(`provider.requestBytesMean.Minimum`), sum(`provider.requestBytesMean.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Request exempt from throttle time",
+          "layout": {
+            "column": 7,
+            "row": 34,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.requestExemptFromThrottleTime.Sum`), average(`provider.requestExemptFromThrottleTime.Average`), max(`provider.requestExemptFromThrottleTime.Maximum`), min(`provider.requestExemptFromThrottleTime.Minimum`), sum(`provider.requestExemptFromThrottleTime.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Request handler avg idle percent",
+          "layout": {
+            "column": 10,
+            "row": 34,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.requestHandlerAvgIdlePercent.Sum`), average(`provider.requestHandlerAvgIdlePercent.Average`), max(`provider.requestHandlerAvgIdlePercent.Maximum`), min(`provider.requestHandlerAvgIdlePercent.Minimum`), sum(`provider.requestHandlerAvgIdlePercent.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Request throttle queue size",
+          "layout": {
+            "column": 1,
+            "row": 37,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.requestThrottleQueueSize.Sum`), average(`provider.requestThrottleQueueSize.Average`), max(`provider.requestThrottleQueueSize.Maximum`), min(`provider.requestThrottleQueueSize.Minimum`), sum(`provider.requestThrottleQueueSize.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Request throttle time",
+          "layout": {
+            "column": 4,
+            "row": 37,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.requestThrottleTime.Sum`), average(`provider.requestThrottleTime.Average`), max(`provider.requestThrottleTime.Maximum`), min(`provider.requestThrottleTime.Minimum`), sum(`provider.requestThrottleTime.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Request time",
+          "layout": {
+            "column": 7,
+            "row": 37,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.requestTime.Sum`), average(`provider.requestTime.Average`), max(`provider.requestTime.Maximum`), min(`provider.requestTime.Minimum`), sum(`provider.requestTime.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Root disk used",
+          "layout": {
+            "column": 10,
+            "row": 37,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.rootDiskUsed.Sum`), average(`provider.rootDiskUsed.Average`), max(`provider.rootDiskUsed.Maximum`), min(`provider.rootDiskUsed.Minimum`), sum(`provider.rootDiskUsed.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Swap used",
+          "layout": {
+            "column": 1,
+            "row": 40,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.swapUsed.Sum`), average(`provider.swapUsed.Average`), max(`provider.swapUsed.Maximum`), min(`provider.swapUsed.Minimum`), sum(`provider.swapUsed.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Swap free",
+          "layout": {
+            "column": 4,
+            "row": 40,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.swapFree.Sum`), average(`provider.swapFree.Average`), max(`provider.swapFree.Maximum`), min(`provider.swapFree.Minimum`), sum(`provider.swapFree.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Under min isr partition count",
+          "layout": {
+            "column": 7,
+            "row": 40,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.underMinIsrPartitionCount.Sum`), average(`provider.underMinIsrPartitionCount.Average`), max(`provider.underMinIsrPartitionCount.Maximum`), min(`provider.underMinIsrPartitionCount.Minimum`), sum(`provider.underMinIsrPartitionCount.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Under replicated partitions",
+          "layout": {
+            "column": 10,
+            "row": 40,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.underReplicatedPartitions.Sum`), average(`provider.underReplicatedPartitions.Average`), max(`provider.underReplicatedPartitions.Maximum`), min(`provider.underReplicatedPartitions.Minimum`), sum(`provider.underReplicatedPartitions.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Zoo keeper request latency ms mean",
+          "layout": {
+            "column": 1,
+            "row": 43,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.zooKeeperRequestLatencyMsMean.Sum`), average(`provider.zooKeeperRequestLatencyMsMean.Average`), max(`provider.zooKeeperRequestLatencyMsMean.Maximum`), min(`provider.zooKeeperRequestLatencyMsMean.Minimum`), sum(`provider.zooKeeperRequestLatencyMsMean.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Zoo keeper session state",
+          "layout": {
+            "column": 4,
+            "row": 43,
+            "width": 3,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "nrqlQueries": [
+              {
+                "accountId": "805553",
+                "offset": 300000,
+                "query": "SELECT sum(`provider.zooKeeperSessionState.Sum`), average(`provider.zooKeeperSessionState.Average`), max(`provider.zooKeeperSessionState.Maximum`), min(`provider.zooKeeperSessionState.Minimum`), sum(`provider.zooKeeperSessionState.SampleCount`) FROM AwsMskBrokerSample WHERE provider='AwsMskBroker' AND `entityGuid` = 'ODA1NTUzfElORlJBfE5BfC0xOTk1Mjc0ODQ2NDQwNDM3NjU3' TIMESERIES auto"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
