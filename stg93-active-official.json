@@ -669,7 +669,7 @@
           }
         },
         {
-          "title": "Log Metrics Header",
+          "title": "",
           "layout": {
             "column": 1,
             "row": 26,
@@ -681,7 +681,7 @@
             "id": "viz.markdown"
           },
           "rawConfiguration": {
-            "text": "### Log Metrics"
+            "text": "### MSK Logs"
           }
         },
         {
@@ -698,13 +698,18 @@
           },
           "rawConfiguration": {
             "dataFormatters": [],
+            "facet": {
+              "showOtherSeries": false
+            },
             "nrqlQueries": [
               {
-                "accountId": 805553,
-                "query": "SELECT count(*) AS 'Total Logs' FROM Log where message LIKE '%%' and `aws.logGroup` LIKE '%mcflow-stg-na-msk%'"
+                "accountId": 734057,
+                "query": "SELECT count(*) AS 'Total Logs' FROM Log where message LIKE '%%' and `aws.logGroup` LIKE '/digital-mcflow-stg93-stage-us-msk/msk'"
               }
             ],
-            "thresholds": []
+            "platformOptions": {
+              "ignoreTimeRange": false
+            }
           }
         },
         {
@@ -727,7 +732,7 @@
             "nrqlQueries": [
               {
                 "accountId": 805553,
-                "query": "SELECT count(*) AS 'Error Logs' FROM Log where message LIKE '%] ERROR%' and `aws.logGroup` LIKE '%mcflow-stg-na-msk%'"
+                "query": "SELECT count(*) AS 'Error Logs' FROM Log where message LIKE '%ERROR%' and `aws.logGroup` LIKE '/digital-mcflow-stg93-stage-us-msk/msk'"
               }
             ],
             "platformOptions": {
@@ -755,7 +760,7 @@
             "nrqlQueries": [
               {
                 "accountId": 805553,
-                "query": "SELECT count(*) FROM Log where `aws.logGroup` LIKE '%mcflow-stg-na-msk%' AND message LIKE '%] ERROR%' FACET message"
+                "query": "SELECT count(*) FROM Log where `aws.logGroup` LIKE '/digital-mcflow-stg93-stage-us-msk/msk' AND message LIKE '%ERROR%' FACET message"
               }
             ],
             "platformOptions": {
@@ -785,7 +790,320 @@
             "nrqlQueries": [
               {
                 "accountId": 805553,
-                "query": "SELECT count(*) FROM Log where `aws.logGroup` LIKE '%mcflow-stg-na-msk%' AND message LIKE '%] ERROR%' FACET message TIMESERIES AUTO"
+                "query": "SELECT count(*) FROM Log where `aws.logGroup` LIKE '/digital-mcflow-stg93-stage-us-msk/msk' AND message LIKE '%ERROR%' FACET message TIMESERIES AUTO"
+              }
+            ],
+            "platformOptions": {
+              "ignoreTimeRange": false
+            },
+            "yAxisLeft": {
+              "zero": true
+            }
+          }
+        },
+        {
+          "title": "",
+          "layout": {
+            "column": 1,
+            "row": 30,
+            "width": 12,
+            "height": 1
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.markdown"
+          },
+          "rawConfiguration": {
+            "text": "# Schema Registry"
+          }
+        },
+        {
+          "title": "Pod Information",
+          "layout": {
+            "column": 1,
+            "row": 31,
+            "width": 4,
+            "height": 6
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.billboard"
+          },
+          "rawConfiguration": {
+            "facet": {
+              "showOtherSeries": false
+            },
+            "nrqlQueries": [
+              {
+                "accountId": 734056,
+                "query": "FROM Metric SELECT latest(k8s.clusterName) as 'Cluster Name', latest(k8s.status) as 'Status', latest(k8s.createdBy) as 'Created By', latest(k8s.createdKind) as 'Created Kind', average(net.errorsPerSecond) as 'Errors Per Second', latest(startTime) * 1000 as 'Start Time', uniqueCount(entity.id) as 'Number of pods running' WHERE metricName = 'k8s.pod.startTime' AND entity.name LIKE '%mcflow-schema-registry-primary%' AND k8s.namespaceName = 'us-stg93-mesh-core'"
+              }
+            ],
+            "platformOptions": {
+              "ignoreTimeRange": false
+            }
+          }
+        },
+        {
+          "title": "CPU Utilization",
+          "layout": {
+            "column": 5,
+            "row": 31,
+            "width": 4,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "facet": {
+              "showOtherSeries": false
+            },
+            "legend": {
+              "enabled": true
+            },
+            "nrqlQueries": [
+              {
+                "accountId": 734056,
+                "query": "FROM Metric SELECT max(k8s.container.cpuCoresUtilization) AS 'CPU utilization (%)' WHERE entity.name LIKE '%mcflow-schema-registry-primary%' AND k8s.namespaceName = 'us-stg93-mesh-core' TIMESERIES AUTO FACET entity.name"
+              }
+            ],
+            "platformOptions": {
+              "ignoreTimeRange": false
+            },
+            "yAxisLeft": {
+              "zero": true
+            }
+          }
+        },
+        {
+          "title": "Memory Utilization",
+          "layout": {
+            "column": 9,
+            "row": 31,
+            "width": 4,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "facet": {
+              "showOtherSeries": false
+            },
+            "legend": {
+              "enabled": true
+            },
+            "nrqlQueries": [
+              {
+                "accountId": 734056,
+                "query": "FROM Metric SELECT max(k8s.container.memoryWorkingSetUtilization) AS 'Memory utilization (%)' WHERE entity.name LIKE '%mcflow-schema-registry-primary%' AND k8s.namespaceName = 'us-stg93-mesh-core' TIMESERIES AUTO FACET entity.name"
+              }
+            ],
+            "platformOptions": {
+              "ignoreTimeRange": false
+            },
+            "yAxisLeft": {
+              "zero": true
+            }
+          }
+        },
+        {
+          "title": "Storage Utilization (%)",
+          "layout": {
+            "column": 5,
+            "row": 34,
+            "width": 4,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "facet": {
+              "showOtherSeries": false
+            },
+            "legend": {
+              "enabled": true
+            },
+            "nrqlQueries": [
+              {
+                "accountId": 734056,
+                "query": "SELECT max(k8s.container.fsUsedPercent) AS 'Storage utlization (%)' FROM Metric WHERE entity.name LIKE '%mcflow-schema-registry-primary%' AND k8s.namespaceName = 'us-stg93-mesh-core' TIMESERIES auto FACET entity.name"
+              }
+            ],
+            "platformOptions": {
+              "ignoreTimeRange": false
+            },
+            "yAxisLeft": {
+              "zero": true
+            }
+          }
+        },
+        {
+          "title": "Network Metrics",
+          "layout": {
+            "column": 9,
+            "row": 34,
+            "width": 4,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "colors": {
+              "seriesOverrides": [
+                {
+                  "color": "#ff0000",
+                  "seriesName": "Errors / sec"
+                }
+              ]
+            },
+            "facet": {
+              "showOtherSeries": false
+            },
+            "legend": {
+              "enabled": true
+            },
+            "nrqlQueries": [
+              {
+                "accountId": 734056,
+                "query": "FROM Metric SELECT max(k8s.pod.netRxBytesPerSecond) / 1000 AS 'Received KBps', max(k8s.pod.netTxBytesPerSecond) / 1000 AS 'Transmitted KBps', max(k8s.pod.netErrorsPerSecond) AS 'Errors / sec' WHERE entity.name LIKE '%mcflow-schema-registry-primary%' AND k8s.namespaceName = 'us-stg93-mesh-core' TIMESERIES AUTO"
+              }
+            ],
+            "platformOptions": {
+              "ignoreTimeRange": false
+            },
+            "yAxisLeft": {
+              "zero": true
+            }
+          }
+        },
+        {
+          "title": "",
+          "layout": {
+            "column": 1,
+            "row": 37,
+            "width": 12,
+            "height": 1
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.markdown"
+          },
+          "rawConfiguration": {
+            "text": "### Schema Registry Log Metrics"
+          }
+        },
+        {
+          "title": "Total Logs",
+          "layout": {
+            "column": 1,
+            "row": 38,
+            "width": 2,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.billboard"
+          },
+          "rawConfiguration": {
+            "facet": {
+              "showOtherSeries": false
+            },
+            "nrqlQueries": [
+              {
+                "accountId": 805553,
+                "query": "SELECT count(*) As 'Total Logs' FROM Log WHERE message LIKE '%us-stg93-core-java-mesh-container-schema-registry%'"
+              }
+            ],
+            "platformOptions": {
+              "ignoreTimeRange": false
+            }
+          }
+        },
+        {
+          "title": "Total Error Logs",
+          "layout": {
+            "column": 3,
+            "row": 38,
+            "width": 2,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.billboard"
+          },
+          "rawConfiguration": {
+            "facet": {
+              "showOtherSeries": false
+            },
+            "nrqlQueries": [
+              {
+                "accountId": 805553,
+                "query": "SELECT count(*) As 'Total Logs' FROM Log WHERE message LIKE '%us-stg93-core-java-mesh-container-schema-registry%' AND message LIKE '%error%'"
+              }
+            ],
+            "platformOptions": {
+              "ignoreTimeRange": false
+            }
+          }
+        },
+        {
+          "title": "Error Logs By Type",
+          "layout": {
+            "column": 5,
+            "row": 38,
+            "width": 4,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.table"
+          },
+          "rawConfiguration": {
+            "facet": {
+              "showOtherSeries": false
+            },
+            "nrqlQueries": [
+              {
+                "accountId": 805553,
+                "query": "SELECT count(*) As 'Total Logs' FROM Log WHERE message LIKE '%us-stg93-core-java-mesh-container-schema-registry%' AND message LIKE '%error%' FACET message"
+              }
+            ],
+            "platformOptions": {
+              "ignoreTimeRange": false
+            }
+          }
+        },
+        {
+          "title": "Error Logs",
+          "layout": {
+            "column": 9,
+            "row": 38,
+            "width": 4,
+            "height": 3
+          },
+          "linkedEntityGuids": null,
+          "visualization": {
+            "id": "viz.line"
+          },
+          "rawConfiguration": {
+            "facet": {
+              "showOtherSeries": false
+            },
+            "legend": {
+              "enabled": true
+            },
+            "nrqlQueries": [
+              {
+                "accountId": 805553,
+                "query": "SELECT count(*) As 'Total Logs' FROM Log WHERE message LIKE '%us-stg93-core-java-mesh-container-schema-registry%' AND message LIKE '%error%' FACET message TIMESERIES AUTO "
               }
             ],
             "platformOptions": {
